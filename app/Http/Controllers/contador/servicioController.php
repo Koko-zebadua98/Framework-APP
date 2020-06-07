@@ -61,7 +61,7 @@ class servicioController extends Controller
         //     'costo' => $request->costo,
         //     'monto_mora' => $request->mora
         // ]);
-        return 'OK';
+        return view('contador.newServicio');
     }
 
     public function allService(){
@@ -114,5 +114,13 @@ class servicioController extends Controller
         $servicio = servicio::where('id', '=', $id)->first();
          
         return view('contador.editServicio', compact('servicio', 'id'));
+    }
+
+    public function updateServicioVista(Request $request){
+
+    }
+    public function updateServicio(Request $request){
+
+
     }
 }

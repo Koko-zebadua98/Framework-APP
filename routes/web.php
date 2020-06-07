@@ -31,6 +31,7 @@ Route::group(['namespace' => 'contador', 'middleware' => ['auth', 'isContador']]
     Route::post('nuevoServicio', 'servicioController@createServicio');
     // Route::get('editServicio', 'servicioController@saveNewServiceVersion')->name('editServicio');
     Route::get('servicio/{id}/modificar',['as'=>'editService','uses'=>'servicioController@newServiceVersion']);
+    Route::get('servicio/{id}/update',['as'=>'editService','uses'=>'servicioController@updateServicioVista']);
     Route::post('servicio/{id}/salvar',['as'=>'saveNewVersion','uses'=>'servicioController@saveNewServiceVersion']);
 
   
